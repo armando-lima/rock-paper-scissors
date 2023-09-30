@@ -34,3 +34,19 @@ function playRound(playerSelection, computerSelection) {
     }
 
 }
+
+function game(){
+    for (let i = 0; i < 5; i++){
+        playRound(getPlayerChoice, getComputerChoice);
+    }
+    if (playerScore > computerScore){
+        console.log(`You win! Your score: ${playerScore}\nComputer score: ${computerScore}`);
+    }
+    else{
+        console.log(`You lose! Your score: ${playerScore}\nComputer score: ${computerScore}`);
+    }
+    playerScore = 0;
+    computerScore = 0;
+}
+
+game();
