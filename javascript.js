@@ -12,3 +12,22 @@ function getPlayerChoice() {
     }
     return playerChoice;
 }
+
+function playRound(playerSelection, computerSelection) {
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+    if ((playerSelection === "rock" && computerSelection === "paper")
+        || (playerSelection === "paper" && computerSelection === "scissor")
+        || (playerSelection === "scissor" && computerSelection === "rock")) {
+        console.log(`You lose this round! ${computerSelection} beats ${playerSelection}`);
+        computerScore++;
+    }
+    else if (playerSelection === computerSelection){
+        console.log(`It is a tie! Both you and the computer selected ${computerSelection}`);
+    }
+    else{
+        console.log(`You win this round! ${playerSelection} beats ${computerSelection}`);
+        playerScore++;
+    }
+
+}
