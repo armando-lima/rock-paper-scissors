@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     const computerChoice = ['rock', 'paper', 'scissor'];
     let randomIndex = Math.floor(Math.random() * computerChoice.length);
