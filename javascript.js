@@ -3,32 +3,17 @@ let computerScore = 0;
 
 function getComputerChoice() {
   const computerChoice = ["rock", "paper", "scissor"];
-  let randomIndex = Math.floor(Math.random() * computerChoice.length);
+  const randomIndex = Math.floor(Math.random() * computerChoice.length);
   return computerChoice[randomIndex];
 }
 
-function getPlayerChoice() {
-  let playerChoice = prompt(
-    "Please input your choice: Rock / Paper / Scissor"
-  ).toLowerCase();
-  while (
-    playerChoice !== "rock" &&
-    playerChoice !== "paper" &&
-    playerChoice !== "scissor"
-  ) {
-    console.log(
-      "Wrong input. Please select one of the following: Rock / Paper / Scissor"
-    );
-    playerChoice = prompt(
-      "Please input your choice: Rock / Paper / Scissor"
-    ).toLowerCase();
+function getPlayerChoice(button) {
+    return button.id;
   }
-  return playerChoice;
-}
 
-function playRound(playerSelection, computerSelection) {
-  playerSelection = getPlayerChoice();
-  computerSelection = getComputerChoice();
+function playRound(button) {
+  const playerSelection = getPlayerChoice(button);
+  const computerSelection = getComputerChoice();
   if (
     (playerSelection === "rock" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "scissor") ||
@@ -49,3 +34,10 @@ function playRound(playerSelection, computerSelection) {
     playerScore++;
   }
 }
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) =>
+  button.addEventListener("click", () => {
+    playRound(button);
+  })
+);
