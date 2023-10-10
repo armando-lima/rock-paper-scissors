@@ -19,20 +19,15 @@ function playRound(button) {
     (playerSelection === "paper" && computerSelection === "scissor") ||
     (playerSelection === "scissor" && computerSelection === "rock")
   ) {
-    console.log(
-      `You lose this round! ${computerSelection} beats ${playerSelection}`
-    );
+    result.innerText = `You lose this round! ${computerSelection} beats ${playerSelection}`;
     computerScore++;
   } else if (playerSelection === computerSelection) {
-    console.log(
-      `It is a tie! Both you and the computer selected ${computerSelection}`
-    );
+    result.innerText = `It is a tie! Both you and the computer selected ${computerSelection}`;
   } else {
-    console.log(
-      `You win this round! ${playerSelection} beats ${computerSelection}`
-    );
+    result.innerText = `You win this round! ${playerSelection} beats ${computerSelection}`;
     playerScore++;
   }
+  score.innerText = `Player score: ${playerScore}\nComputer score: ${computerScore}`
 }
 
 const buttons = document.querySelectorAll("button");
@@ -41,3 +36,9 @@ buttons.forEach((button) =>
     playRound(button);
   })
 );
+
+const result = document.createElement('div');
+document.querySelector('body').appendChild(result);
+
+let score = document.createElement('div');
+document.querySelector('body').appendChild(score);
