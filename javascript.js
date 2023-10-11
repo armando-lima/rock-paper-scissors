@@ -2,7 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-  const computerChoice = ["rock", "paper", "scissor"];
+  const computerChoice = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * computerChoice.length);
   return computerChoice[randomIndex];
 }
@@ -16,8 +16,8 @@ function playRound(button) {
   const computerSelection = getComputerChoice();
   if (
     (playerSelection === "rock" && computerSelection === "paper") ||
-    (playerSelection === "paper" && computerSelection === "scissor") ||
-    (playerSelection === "scissor" && computerSelection === "rock")
+    (playerSelection === "paper" && computerSelection === "scissors") ||
+    (playerSelection === "scissors" && computerSelection === "rock")
   ) {
     result.innerText = `You lose this round! ${computerSelection} beats ${playerSelection}`;
     computerScore++;
