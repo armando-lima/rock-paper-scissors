@@ -15,3 +15,7 @@ html {
     background-color: rgba(0, 0, 155, 0.555);
     color: white
 }
+
+.rules {
+    text-align: center;
+}
