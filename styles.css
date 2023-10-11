@@ -19,3 +19,14 @@ html {
 .rules {
     text-align: center;
 }
+
+button{
+    background-color: navy;
+    border-radius: 1em;
+    height: 10em;
+    width: 10em;
+}
+
+.buttons{
+    text-align: center;
+}
