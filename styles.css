@@ -34,5 +34,14 @@ button{
 }
 
 .buttonsContainer{
-    text-align: center;
+    justify-content: center;
+    display: flex;
+    gap: 1em;
+}
+
+.scoreContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    padding: 3em;
 }
