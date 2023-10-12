@@ -38,7 +38,7 @@ buttons.forEach((button) =>
 );
 
 const result = document.createElement('div');
-document.querySelector('.buttons').appendChild(result);
+document.querySelector('.buttonsContainer').appendChild(result);
 
 let score = document.createElement('div');
-document.querySelector('.buttons').appendChild(score);
+document.querySelector('.buttonsContainer').appendChild(score);
