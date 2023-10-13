@@ -1,5 +1,5 @@
-let playerScore = 0;
-let computerScore = 0;
+let playerCounter = 0;
+let computerCounter = 0;
 
 function getComputerChoice() {
   const computerChoice = ["rock", "paper", "scissors"];
@@ -14,20 +14,21 @@ function getPlayerChoice(button) {
 function playRound(button) {
   const playerSelection = getPlayerChoice(button);
   const computerSelection = getComputerChoice();
+  computerImg.src = `images/` + computerSelection + `.png`;
+  playerImg.src = `images/` + playerSelection + `.png`;
   if (
     (playerSelection === "rock" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "rock")
   ) {
-    result.innerText = `You lose this round! ${computerSelection} beats ${playerSelection}`;
-    computerScore++;
+    computerCounter++;
   } else if (playerSelection === computerSelection) {
-    result.innerText = `It is a tie! Both you and the computer selected ${computerSelection}`;
+    return;
   } else {
-    result.innerText = `You win this round! ${playerSelection} beats ${computerSelection}`;
-    playerScore++;
+    playerCounter++;
   }
-  score.innerText = `Player score: ${playerScore}\nComputer score: ${computerScore}`
+  playerScore.innerText = `Player score: ${playerCounter}`;
+  computerScore.innerText = `Computer score: ${computerCounter}`;
 }
 
 const buttons = document.querySelectorAll("button");
@@ -37,8 +38,11 @@ buttons.forEach((button) =>
   })
 );
 
-const result = document.createElement('div');
-document.querySelector('.buttonsContainer').appendChild(result);
+const playerScore = document.querySelector('.playerScore');
+const computerScore = document.querySelector('.computerScore');
+const playerImg = document.querySelector('.playerChoice');
+const computerImg = document.querySelector('.computerChoice');
 
-let score = document.createElement('div');
-document.querySelector('.buttons').appendChild(score);
+//https://michalosman.github.io/rock-paper-scissors/
+//https://mooniidev.github.io/rock-paper-scissors-game/
+//https://www.photopea.com/
