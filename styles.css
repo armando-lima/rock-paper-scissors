@@ -10,14 +10,20 @@ html {
     background-color: lightblue;
 }
 
-.pageHeader {
+.headerContainer {
     text-align: center;
     background-color: rgba(0, 0, 155, 0.555);
-    color: white
+    color: white;
+    padding: 2em;
+}
+
+.rulesContainer {
+    text-align: center;
+    padding: 2em;
 }
 
 .rules {
-    text-align: center;
+    padding: 0.5em;
 }
 
 button{
@@ -27,6 +33,15 @@ button{
     width: 10em;
 }
 
-.buttons{
-    text-align: center;
+.buttonsContainer{
+    justify-content: center;
+    display: flex;
+    gap: 1em;
+}
+
+.scoreContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    padding: 3em;
 }

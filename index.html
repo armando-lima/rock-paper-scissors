@@ -10,16 +10,25 @@
 </head>
 
 <body>
-    <header class="pageHeader">
-        <h1>Rock, Paper or Scissors?</h1>
-        <p>The choice is yours!</p>
+    <header class="headerContainer">
+        <h1 class="header">Rock, Paper or Scissors?</h1>
     </header>
     <main>
-        <div class="rules">
-            <p>Rock beats Scissors | Scissors beats Paper | Paper beats Rock</p>
-            <p>Play against the computer. Whoever scores 5 points first wins the game</p>
+        <div class="rulesContainer">
+            <p class="rules">Rock beats Scissors | Scissors beats Paper | Paper beats Rock</p>
+            <p class="rules">Play against the computer. Whoever scores 5 points first wins the game</p>
         </div>
-        <div class="buttons">
+        <div class="scoreContainer">
+            <div class="playerScoreContainer">
+                <img class="playerChoice" src="">
+                <p class="playerScore">Player score: </p>
+            </div>
+            <div class="computerScoreContainer">
+                <img class="computerChoice" src="">
+                <p class="computerScore">Computer score: </p>
+            </div>
+        </div>
+        <div class="buttonsContainer">
             <button id="rock"><img src="images/rock.png"></button>
             <button id="paper"><img src="images/paper.png"></button>
             <button id="scissors"><img src="images/scissors.png"></button>
