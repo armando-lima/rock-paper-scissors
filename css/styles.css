@@ -11,9 +11,11 @@
 html {
     background-color: #1F2833;
     color: #C5C6C7;
+    display: flex;
+    flex-direction: column;
 }
 
-.headerContainer {
+.headerContainer, .footerContainer {
     text-align: center;
     background-color: #0B0C10;
     color: #66FCF1;
@@ -41,6 +43,7 @@ button{
     justify-content: center;
     display: flex;
     gap: 1em;
+    margin: 2em;
 }
 
 .scoreContainer {
@@ -67,4 +70,10 @@ img{
 
 .result {
     text-align: center;
+}
+
+a, a:visited {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
 }
