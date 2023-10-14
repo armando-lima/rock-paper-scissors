@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 
 .rulesContainer {
     text-align: center;
-    padding: 2em;
+    margin: 2em;
 }
 
 .rules {
@@ -43,5 +44,19 @@ button{
     display: flex;
     justify-content: center;
     gap: 4em;
-    padding: 3em;
+    margin: 2em;
+}
+
+.playerScoreContainer, .computerScoreContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 10em;
+}
+
+img{
+    max-width: 130px;
+    max-height: 102px;
 }

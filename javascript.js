@@ -14,6 +14,8 @@ function getPlayerChoice(button) {
 function playRound(button) {
   const playerSelection = getPlayerChoice(button);
   const computerSelection = getComputerChoice();
+  playerChoice.innerText = `You chose ${playerSelection}.`
+  computerChoice.innerText = `The computer chose ${computerSelection}.`
   computerImg.src = `images/` + computerSelection + `.png`;
   playerImg.src = `images/` + playerSelection + `.png`;
   if (
@@ -40,8 +42,10 @@ buttons.forEach((button) =>
 
 const playerScore = document.querySelector('.playerScore');
 const computerScore = document.querySelector('.computerScore');
-const playerImg = document.querySelector('.playerChoice');
-const computerImg = document.querySelector('.computerChoice');
+const playerImg = document.querySelector('.playerChoiceImg');
+const computerImg = document.querySelector('.computerChoiceImg');
+const playerChoice = document.querySelector('.playerChoice');
+const computerChoice = document.querySelector('.computerChoice');
 
 //https://michalosman.github.io/rock-paper-scissors/
 //https://mooniidev.github.io/rock-paper-scissors-game/
