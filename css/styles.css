@@ -24,11 +24,11 @@ html {
 
 .rulesContainer {
     text-align: center;
-    margin: 2em;
+    margin: 1.5em;
 }
 
 .rules {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 button{
@@ -70,6 +70,8 @@ img{
 
 .result {
     text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
 a, a:visited {

@@ -1,5 +1,6 @@
 let playerCounter = 0;
 let computerCounter = 0;
+let counter = 0;
 
 function getComputerChoice() {
   const computerChoice = ["rock", "paper", "scissors"];
@@ -18,17 +19,18 @@ function playRound(button) {
   computerChoice.innerText = `The computer chose ${computerSelection}.`
   computerImg.src = `images/` + computerSelection + `.png`;
   playerImg.src = `images/` + playerSelection + `.png`;
+  counter++;
   if (
     (playerSelection === "rock" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "rock")
   ) {
-    result.innerText = `Oh no! The computer managed to win this round :(.`;
+    result.innerText = `Round ${counter}\nOh no! The computer managed to win this round :(.`;
     computerCounter++;
   } else if (playerSelection === computerSelection) {
-    result.innerText = `It's a draw!`;
+    result.innerText = `Round ${counter}\nIt's a draw!`;
   } else {
-    result.innerText = `Player wins this round! Congratulations! :D`;
+    result.innerText = `Round ${counter}\nPlayer wins this round! Congratulations! :D`;
     playerCounter++;
   }
   playerScore.innerText = `Player score: ${playerCounter}`;
