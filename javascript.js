@@ -1,5 +1,6 @@
-let playerScore = 0;
-let computerScore = 0;
+let playerCounter = 0;
+let computerCounter = 0;
+let counter = 0;
 
 function getComputerChoice() {
   const computerChoice = ["rock", "paper", "scissors"];
@@ -14,20 +15,26 @@ function getPlayerChoice(button) {
 function playRound(button) {
   const playerSelection = getPlayerChoice(button);
   const computerSelection = getComputerChoice();
+  playerChoice.innerText = `You chose ${playerSelection}.`
+  computerChoice.innerText = `The computer chose ${computerSelection}.`
+  computerImg.src = `images/` + computerSelection + `.png`;
+  playerImg.src = `images/` + playerSelection + `.png`;
+  counter++;
   if (
     (playerSelection === "rock" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "rock")
   ) {
-    result.innerText = `You lose this round! ${computerSelection} beats ${playerSelection}`;
-    computerScore++;
+    result.innerText = `Round ${counter}\nOh no! The computer managed to win this round :(.`;
+    computerCounter++;
   } else if (playerSelection === computerSelection) {
-    result.innerText = `It is a tie! Both you and the computer selected ${computerSelection}`;
+    result.innerText = `Round ${counter}\nIt's a draw!`;
   } else {
-    result.innerText = `You win this round! ${playerSelection} beats ${computerSelection}`;
-    playerScore++;
+    result.innerText = `Round ${counter}\nPlayer wins this round! Congratulations! :D`;
+    playerCounter++;
   }
-  score.innerText = `Player score: ${playerScore}\nComputer score: ${computerScore}`
+  playerScore.innerText = `Player score: ${playerCounter}`;
+  computerScore.innerText = `Computer score: ${computerCounter}`;
 }
 
 const buttons = document.querySelectorAll("button");
@@ -37,9 +44,14 @@ buttons.forEach((button) =>
   })
 );
 
-const body = document.querySelector('body');
-const result = document.createElement('div');
-body.appendChild(result);
+const playerScore = document.querySelector('.playerScore');
+const computerScore = document.querySelector('.computerScore');
+const playerImg = document.querySelector('.playerChoiceImg');
+const computerImg = document.querySelector('.computerChoiceImg');
+const playerChoice = document.querySelector('.playerChoice');
+const computerChoice = document.querySelector('.computerChoice');
+const result = document.querySelector('.result');
 
-let score = document.createElement('div');
-body.insertBefore(score, buttons[0]);
+//https://michalosman.github.io/rock-paper-scissors/
+//https://mooniidev.github.io/rock-paper-scissors-game/
+//https://www.photopea.com/

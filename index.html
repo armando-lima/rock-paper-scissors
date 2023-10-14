@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <script src="javascript.js" defer></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <header class="headerContainer">
+        <h1 class="header">Rock, Paper or Scissors?</h1>
+    </header>
+    <main>
+        <div class="rulesContainer">
+            <p class="rules">Rock beats Scissors | Scissors beats Paper | Paper beats Rock</p>
+        </div>
+        <div class="result"></div>
+        <div class="scoreContainer">
+            <div class="playerScoreContainer">
+                <p class="playerChoice"></p>
+                <img class="playerChoiceImg" src="images/question-mark.png">
+                <p class="playerScore">Player score: 0</p>
+            </div>
+            <div class="computerScoreContainer">
+                <p class="computerChoice"></p>
+                <img class="computerChoiceImg" src="images/question-mark.png">
+                <p class="computerScore">Computer score: 0</p>
+            </div>
+        </div>
+        <div class="buttonsContainer">
+            <button id="rock"><img src="images/rock.png"></button>
+            <button id="paper"><img src="images/paper.png"></button>
+            <button id="scissors"><img src="images/scissors.png"></button>
+        </div>
+    </main>
+    <footer class="footerContainer">
+        <p>Copyright &#169; Armando Lima <a href="https://github.com/armando-lima" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i></a></p>
+    </footer>
 </body>
+
 </html>
