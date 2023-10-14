@@ -8,13 +8,14 @@
 }
 
 html {
-    background-color: lightblue;
+    background-color: #1F2833;
+    color: #C5C6C7;
 }
 
 .headerContainer {
     text-align: center;
-    background-color: rgba(0, 0, 155, 0.555);
-    color: white;
+    background-color: #0B0C10;
+    color: #66FCF1;
     padding: 2em;
 }
 
@@ -28,8 +29,9 @@ html {
 }
 
 button{
-    background-color: navy;
+    background-color: #1F2833;
     border-radius: 1em;
+    border-color: #66FCF1; 
     height: 10em;
     width: 10em;
 }
@@ -52,8 +54,9 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20em;
+    width: 14em;
     height: 10em;
+    gap: 1.5em;
 }
 
 img{
