@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    font-family: 'Silkscreen', 'Roboto', system-ui, -apple-system, sans-serif;
     box-sizing: border-box;
 }
 
@@ -25,7 +26,7 @@ html {
 }
 
 .rules {
-    padding: 0.5em;
+    font-size: 1.2em;
 }
 
 button{
@@ -54,7 +55,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 14em;
+    width: 20em;
     height: 10em;
     gap: 1.5em;
 }
