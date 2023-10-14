@@ -23,10 +23,12 @@ function playRound(button) {
     (playerSelection === "paper" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "rock")
   ) {
+    result.innerText = `Oh no! The computer managed to win this round :(.`;
     computerCounter++;
   } else if (playerSelection === computerSelection) {
-    return;
+    result.innerText = `It's a draw!`;
   } else {
+    result.innerText = `Player wins this round! Congratulations! :D`;
     playerCounter++;
   }
   playerScore.innerText = `Player score: ${playerCounter}`;
@@ -46,6 +48,7 @@ const playerImg = document.querySelector('.playerChoiceImg');
 const computerImg = document.querySelector('.computerChoiceImg');
 const playerChoice = document.querySelector('.playerChoice');
 const computerChoice = document.querySelector('.computerChoice');
+const result = document.querySelector('.result');
 
 //https://michalosman.github.io/rock-paper-scissors/
 //https://mooniidev.github.io/rock-paper-scissors-game/
