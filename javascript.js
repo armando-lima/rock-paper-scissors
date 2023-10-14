@@ -51,7 +51,3 @@ const computerImg = document.querySelector('.computerChoiceImg');
 const playerChoice = document.querySelector('.playerChoice');
 const computerChoice = document.querySelector('.computerChoice');
 const result = document.querySelector('.result');
-
-//https://michalosman.github.io/rock-paper-scissors/
-//https://mooniidev.github.io/rock-paper-scissors-game/
-//https://www.photopea.com/
